@@ -1,0 +1,32 @@
+[
+  {
+    "id": 9,
+    "login": "lox",
+    "hashedPassword": "$2a$10$TTMlbepqpMM0cGpgjwGYj.dNOTpmIfpqec.oCG7sui/c4jhuIWNw2"
+  },
+  {
+    "id": 10,
+    "login": "StrangeDory",
+    "hashedPassword": "$2a$10$SIjH6qO3V3pZNIoqygT8xuu4eYqEs8Cvpo4oa31jy9OeIM5qv0vKK"
+  },
+  {
+    "id": 12,
+    "login": "loto",
+    "hashedPassword": "$2a$10$qiivYeXuuVmR2fJ0xL6YZuBrlKyCAQVkvRCR3yBy50o59uOZOgzFy"
+  },
+  {
+    "id": 13,
+    "login": "hgh",
+    "hashedPassword": "$2a$10$DQ.4shHAuzEfluoYmk1Zuuaz6SpXeM/g94K.bEucPuSBAyIETk7Nq"
+  },
+  {
+    "id": 14,
+    "login": "111",
+    "hashedPassword": "$2a$10$ZQESq2IwJFRv0/fb/.eU5.Dh8vubdT0Atl6psQBRZ9j94tLJ756/G"
+  },
+  {
+    "id": 15,
+    "login": "12334",
+    "hashedPassword": "$2a$10$Iu0o5iZPOnC8180QKkA1m.lnrJ8V0/krfKMY1nSJOjST.eGsvb75q"
+  }
+]
