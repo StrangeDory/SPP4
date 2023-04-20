@@ -1,37 +1,33 @@
+let socket;
 
-if(localStorage.getItem('isUnauthorised')==='true'){
-     drawsignInRoot()
- }else {
+function resolveTracks(jsonData) {
+    console.log(jsonData)
+    const data = JSON.parse(jsonData)
+    reset()
     drawRoot()
-    fetchTracks().then()
+    drawTracks(data[0]);
 }
 
+function raiseConnection() {
+    socket = io()
 
+    socket.on('connect_error', function (err) {
+        console.log(err)
+        reset()
+        drawsignInRoot()
+    })
+
+    socket.on("getTracks", data => resolveTracks(data))
+}
 
 async function responseRoutine(response) {
-    if (response.status === 201) {
-        alert("Registration was successful!")
-        reset();
-        drawsignInRoot();
-    } else if (response.ok === true) {
-            const data = await response.json();
-            console.log('s' + data)
-            localStorage.setItem('isUnauthorised',false);
-            reset();
-            drawRoot();
-            drawTracks(data[0]);
-
-    } else if (response.status === 401)
-    {
-        alert('Not authorized');
-        reset();
-        drawsignInRoot();
-        localStorage.setItem('isUnauthorised',true);
-    }else if (response.status === 400)
-    {
-        alert('Wrong password');
-        reset();
-        drawsignInRoot();
+    if (response.ok === true) {
+        localStorage.setItem('isUnauthorised',false);
+        raiseConnection()
+         await fetchTracks()
+    } else if (response.status === 401) {
+        reset()
+        drawsignInRoot()
     }
 }
 
@@ -77,11 +73,7 @@ async function addUser(user) {
 }
 
 async function fetchTracks() {
-    const response = await fetch('/tracks', {
-        method: "GET",
-        headers: { "Accept": "application/json" }
-    });
-    await responseRoutine(response);
+    socket.emit("askTracks")
 }
 
 async function createTrack(obj, file) {
@@ -91,21 +83,17 @@ async function createTrack(obj, file) {
     await fetch(`/upload`, {
         method: "POST",
         body: formData
-    });
-    const response = await fetch(`/tracks`, {
-        method: "POST",
-        headers: { "Accept": "application/json", "Content-Type": "application/json" },
-        body: JSON.stringify(obj)
-    });
-    await responseRoutine(response);
+    })
+    socket.emit("createTrack", obj)
 }
 
 async function deleteTrack(trackId) {
-    const response = await fetch(`/tracks/${trackId}`, {
-        method: "DELETE",
-        headers: { "Accept": "application/json" }
-    });
-    await responseRoutine(response);
+    socket.emit("deleteTrack", trackId)
+}
+
+async function updateStatus(track) {
+    const trackId = track.id
+    socket.emit("updateStatus", trackId)
 }
 
 function reset() {
@@ -136,10 +124,6 @@ function drawRoot() {
         };
         createTrack(obj, form.elements["track-files"]).then();
     });
-
-
-
-
 }
 
 function drawsignInRoot() {
@@ -162,3 +146,10 @@ function drawsignUpRoot() {
     document.forms["signUp"].addEventListener("submit", e => onSignUp(e));
 }
 
+if(localStorage.getItem('isUnauthorised')=='true'){
+    drawsignInRoot()
+}else {
+    drawRoot()
+    raiseConnection()
+    fetchTracks().then()
+}

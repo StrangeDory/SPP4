@@ -1,28 +1,11 @@
 {
   "0": [
     {
-      "id": 26,
-      "userId": 9,
-      "name": "olo",
+      "id": 34,
+      "userId": 16,
+      "name": "a",
       "status": "Favourite",
-      "dateUpload": "2023-03-30T01:17",
-      "file": {
-        "fieldname": "track-files",
-        "originalname": "NF_-_Time.mp3",
-        "encoding": "7bit",
-        "mimetype": "audio/mpeg",
-        "destination": "uploads",
-        "filename": "NF_-_Time.mp3",
-        "path": "uploads\\NF_-_Time.mp3",
-        "size": 3939200
-      }
-    },
-    {
-      "id": 27,
-      "userId": 9,
-      "name": "lolool",
-      "status": "Common",
-      "dateUpload": "2023-03-30T01:58",
+      "dateUpload": "2023-04-20T13:42",
       "file": {
         "fieldname": "track-files",
         "originalname": "Miley_Cyrus_Flowers.mp3",
@@ -33,64 +16,6 @@
         "path": "uploads\\Miley_Cyrus_Flowers.mp3",
         "size": 8098731
       }
-    },
-    {
-      "id": 28,
-      "userId": 10,
-      "name": "lol",
-      "status": "Favourite",
-      "dateUpload": "2023-03-30T13:17",
-      "file": {
-        "fieldname": "track-files",
-        "originalname": "nf-the-search.mp3",
-        "encoding": "7bit",
-        "mimetype": "audio/mpeg",
-        "destination": "uploads",
-        "filename": "nf-the-search.mp3",
-        "path": "uploads\\nf-the-search.mp3",
-        "size": 9949016
-      }
-    },
-    {
-      "id": 29,
-      "userId": 14,
-      "name": "j",
-      "status": "Not favourite",
-      "dateUpload": "2023-03-30T13:18",
-      "file": {
-        "fieldname": "track-files",
-        "originalname": "Miley_Cyrus_Flowers.mp3",
-        "encoding": "7bit",
-        "mimetype": "audio/mpeg",
-        "destination": "uploads",
-        "filename": "Miley_Cyrus_Flowers.mp3",
-        "path": "uploads\\Miley_Cyrus_Flowers.mp3",
-        "size": 8098731
-      }
-    },
-    {
-      "id": 30,
-      "userId": 9,
-      "name": "search",
-      "status": "Not favourite",
-      "dateUpload": "2023-03-30T13:31",
-      "file": {
-        "fieldname": "track-files",
-        "originalname": "nf-the-search.mp3",
-        "encoding": "7bit",
-        "mimetype": "audio/mpeg",
-        "destination": "uploads",
-        "filename": "nf-the-search.mp3",
-        "path": "uploads\\nf-the-search.mp3",
-        "size": 9949016
-      }
-    },
-    {
-      "id": 31,
-      "userId": 9,
-      "name": "New track-31",
-      "status": "Favourite",
-      "dateUpload": "2023-03-30T16:54"
     }
   ]
 }

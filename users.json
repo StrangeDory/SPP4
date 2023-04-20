@@ -28,5 +28,10 @@
     "id": 15,
     "login": "12334",
     "hashedPassword": "$2a$10$Iu0o5iZPOnC8180QKkA1m.lnrJ8V0/krfKMY1nSJOjST.eGsvb75q"
+  },
+  {
+    "id": 16,
+    "login": "123",
+    "hashedPassword": "$2a$10$ys15cVzRlGNYIBu.JCXjbuFVeL60LeVL8qIll0E.4i3jOE2xzHoKu"
   }
 ]
